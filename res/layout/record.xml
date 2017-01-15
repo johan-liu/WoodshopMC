@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+              android:background="@drawable/background" android:id="@+id/RLRecordRoot">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70px" android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" android:background="@drawable/bg_title_bar_record" android:id="@+id/RLTopBar">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="60px"
+                android:id="@+id/lblTitle"
+                android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="26px" android:gravity="center"
+                />
+        <ImageView android:layout_width="300px" android:layout_height="30px" android:id="@+id/imgTitle"
+                   android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                   android:src="@drawable/title_record_readings" android:scaleType="fitCenter"
+                   android:layout_marginTop="20px" android:layout_centerHorizontal="true"/>
+        <RelativeLayout
+                android:layout_width="120px"
+                android:layout_height="60px" android:id="@+id/RLPause"
+				>
+			<Button
+					android:layout_width="35px"
+					android:layout_height="35px"
+					android:id="@+id/btnPause" android:background="@drawable/peg_normal"
+					android:layout_marginLeft="5px" android:layout_marginTop="15px"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pause"
+                    android:id="@+id/txtBtnPause" android:layout_toRightOf="@+id/btnPause"
+                    android:layout_alignTop="@+id/btnPause" android:layout_alignBottom="@+id/btnPause"
+                    android:gravity="center_vertical" android:textColor="#000000" android:textSize="14px"/>
+        </RelativeLayout>
+		<RelativeLayout android:layout_width="120px" android:layout_height="60px" android:id="@+id/RLRecord"
+						android:layout_alignParentRight="true">
+			<Button android:layout_width="35px" android:layout_height="35px" android:id="@+id/btnRecord"
+					android:background="@drawable/peg_normal" android:layout_marginLeft="20px"
+					android:layout_marginTop="15px"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Record"
+                      android:id="@+id/txtBtnRecord" android:layout_toRightOf="@+id/btnRecord"
+                      android:layout_alignTop="@+id/btnRecord" android:layout_alignBottom="@+id/btnRecord"
+                      android:gravity="center_vertical" android:textColor="#000000" android:textSize="14px"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="70px"
+                    android:layout_alignParentLeft="true" android:layout_alignParentTop="false"
+                    android:background="@drawable/bg_main_banner" android:id="@+id/RLBottomBar"
+                    android:layout_alignParentBottom="true">
+        <ImageView
+                android:layout_width="96px"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgRecord" android:src="@drawable/bt_record_sl"
+                android:scaleType="fitXY"
+                android:layout_marginTop="5px" android:layout_marginBottom="2px"/>
+        <ImageView android:layout_width="96px" android:layout_height="fill_parent" android:id="@+id/imgJobs"
+                   android:src="@drawable/bt_jobs_nl" android:layout_toRightOf="@+id/imgRecord"
+                   android:scaleType="fitXY"
+                   android:layout_marginTop="5px" android:layout_marginBottom="2px"/>
+        <ImageView android:layout_width="96px" android:layout_height="fill_parent" android:id="@+id/imgProducts"
+                   android:src="@drawable/bt_products_nl" android:layout_toRightOf="@+id/imgJobs"
+                   android:scaleType="fitXY" android:layout_marginTop="5px" android:layout_marginBottom="2px"/>
+        <ImageView android:layout_width="96px" android:layout_height="fill_parent" android:id="@+id/imgReports"
+                   android:src="@drawable/bt_report_nl" android:layout_toRightOf="@+id/imgProducts"
+                   android:scaleType="fitXY" android:layout_marginTop="5px" android:layout_marginBottom="2px"/>
+        <ImageView android:layout_width="96px" android:layout_height="fill_parent" android:id="@+id/imgSettings"
+                   android:src="@drawable/bt_setting_nl" android:layout_toRightOf="@+id/imgReports"
+                   android:scaleType="fitXY" android:layout_marginTop="5px" android:layout_marginBottom="2px"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90px"
+            android:layout_below="@+id/RLTopBar" android:layout_marginTop="30px" android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:id="@+id/RLJob">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40px" android:id="@+id/RLJobHeader"
+                android:background="@drawable/bg_product_list_bar">
+            <TextView android:layout_width="250px" android:layout_height="35px" android:text="@string/record_reading_job_hint"
+                      android:id="@+id/lblJobHint"
+                      android:gravity="center_vertical" android:textColor="#503015"
+                      android:textSize="14px" android:layout_toRightOf="@+id/lblJob" android:layout_alignTop="@+id/lblJob"
+                    />
+            <TextView
+                    android:layout_width="150px"
+                    android:layout_height="35px"
+                    android:text="@string/record_reading_job"
+                    android:id="@+id/lblJob" android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                    android:layout_marginLeft="20px" android:gravity="center_vertical" android:textColor="#503015"
+                    android:textSize="14px" android:textStyle="bold"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="380px"
+                android:layout_height="fill_parent" android:id="@+id/RLSelectJob">
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40px" android:id="@+id/RLJobMain" android:layout_below="@+id/RLJobHeader"
+                android:layout_marginLeft="5px" android:layout_marginRight="5px"
+                android:background="@drawable/bg_add_a_product_bg">
+            <TextView android:layout_width="300px" android:layout_height="35px" android:text="@string/record_reading_notselected"
+                      android:id="@+id/txtJobName"
+                      android:gravity="center_vertical" android:textColor="#FFFFFF"
+                      android:textSize="16px" android:layout_marginLeft="40px"
+                      android:layout_alignParentBottom="true" android:layout_marginBottom="2px"
+                      android:textStyle="bold"/>
+            <Button
+                    android:layout_width="27px"
+                    android:layout_height="27px"
+                    android:id="@+id/btnAddJob" android:layout_alignParentRight="true"
+                    android:layout_marginRight="15px" android:background="@drawable/ic_list_plus"
+                    android:layout_alignTop="@+id/txtJobName" android:layout_marginTop="5px"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="10px" android:id="@+id/RLJobFooter"
+                android:background="@drawable/bg_overviewtail" android:layout_below="@+id/RLJobMain">
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="90px" android:layout_below="@+id/RLJob"
+                    android:layout_marginTop="30px" android:layout_marginLeft="20px" android:layout_marginRight="20px"
+                    android:id="@+id/RLLocation">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/RLLocationHeader"
+                        android:background="@drawable/bg_product_list_bar">
+            <TextView android:layout_width="150px" android:layout_height="35px" android:text="@string/record_reading_location"
+                      android:id="@+id/lblLocation" android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                      android:layout_marginLeft="20px" android:gravity="center_vertical" android:textColor="#503015"
+                      android:textSize="14px" android:textStyle="bold"/>
+            <TextView android:layout_width="250px" android:layout_height="35px"
+                      android:text="@string/record_reading_location_hint" android:id="@+id/lblLocHint"
+                      android:gravity="center_vertical" android:textColor="#503015" android:textSize="14px"
+                      android:layout_toRightOf="@+id/lblLocation" android:layout_alignTop="@+id/lblLocation"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/RLLocationMain"
+                        android:layout_below="@+id/RLLocationHeader" android:layout_marginLeft="5px"
+                        android:layout_marginRight="5px" android:background="@drawable/bg_add_a_product_bg">
+            <Button android:layout_width="27px" android:layout_height="27px" android:id="@+id/btnAddLoc"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15px" android:background="@drawable/ic_list_plus"
+                    android:layout_alignTop="@+id/txtLocationName" android:layout_marginTop="5px"/>
+            <TextView android:layout_width="300px" android:layout_height="35px"
+                      android:text="@string/record_reading_notselected" android:id="@+id/txtLocationName"
+                      android:gravity="center_vertical" android:textColor="#FFFFFF" android:textSize="16px"
+                      android:layout_marginLeft="40px"
+                      android:layout_alignParentBottom="true" android:layout_marginBottom="2px"
+                      android:textStyle="bold"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="10px" android:id="@+id/RLLocationFooter"
+                        android:background="@drawable/bg_overviewtail" android:layout_below="@+id/RLLocationMain"/>
+        <RelativeLayout android:layout_width="380px" android:layout_height="fill_parent" android:id="@+id/RLSelectLocation"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="90px" android:layout_below="@+id/RLLocation"
+                    android:layout_marginTop="30px" android:layout_marginLeft="20px" android:layout_marginRight="20px"
+                    android:id="@+id/RLProduct">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="40px"
+                        android:id="@+id/RLProductHeader" android:background="@drawable/bg_product_list_bar">
+            <TextView android:layout_width="150px" android:layout_height="35px"
+                      android:text="@string/record_reading_product" android:id="@+id/lblProduct"
+                      android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                      android:layout_marginLeft="20px" android:gravity="center_vertical" android:textColor="#503015"
+                      android:textSize="14px" android:textStyle="bold"/>
+            <TextView android:layout_width="250px" android:layout_height="35px"
+                      android:text="@string/record_reading_product_hint" android:id="@+id/lblProductHint"
+                      android:gravity="center_vertical" android:textColor="#503015" android:textSize="14px"
+                      android:layout_toRightOf="@+id/lblProduct" android:layout_alignTop="@+id/lblProduct"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/RLProductMain"
+                        android:layout_below="@+id/RLProductHeader" android:layout_marginLeft="5px"
+                        android:layout_marginRight="5px" android:background="@drawable/bg_add_a_product_bg">
+            <Button android:layout_width="27px" android:layout_height="27px" android:id="@+id/btnAddProduct"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15px" android:background="@drawable/ic_list_plus"
+                    android:layout_alignTop="@+id/txtProductName" android:layout_marginTop="5px"/>
+            <TextView android:layout_width="300px" android:layout_height="35px"
+                      android:text="@string/record_reading_notselected" android:id="@+id/txtProductName"
+                      android:gravity="center_vertical" android:textColor="#FFFFFF" android:textSize="16px"
+                      android:layout_marginLeft="40px"
+                      android:layout_alignParentBottom="true" android:layout_marginBottom="2px"
+                      android:textStyle="bold"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="380px" android:layout_height="fill_parent"
+                        android:id="@+id/RLSelectProduuct"/>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="10px"
+                        android:id="@+id/RLProductFooter" android:background="@drawable/bg_overviewtail"
+                        android:layout_below="@+id/RLProductMain"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="90px"
+                    android:layout_below="@+id/RLProduct"
+                    android:layout_marginLeft="20px" android:layout_marginRight="20px"
+                    android:id="@+id/RLCoverage"
+                    android:layout_marginTop="30px">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="40px"
+                        android:id="@+id/RLCoverageHeader" android:background="@drawable/bg_product_list_bar">
+            <TextView android:layout_width="150px" android:layout_height="35px"
+                      android:text="@string/record_reading_coverage" android:id="@+id/lblCoverage"
+                      android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                      android:layout_marginLeft="20px" android:gravity="center_vertical" android:textColor="#503015"
+                      android:textSize="14px" android:textStyle="bold"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/RLCoverageMain"
+                        android:layout_below="@+id/RLCoverageHeader" android:layout_marginLeft="5px"
+                        android:layout_marginRight="5px" android:background="@drawable/bg_add_a_product_bg">
+            <TextView android:layout_width="20px" android:layout_height="20px" android:text="2" android:id="@+id/txtHeightTwo"
+                      android:textColor="#FFFFFF" android:textSize="10px" android:layout_alignParentRight="true"
+                      android:gravity="top"
+                      android:layout_alignParentTop="false" android:layout_alignParentLeft="false"
+                      android:layout_alignParentBottom="false" android:layout_marginRight="28px"
+                      android:layout_marginTop="3px"/>
+            <TextView android:layout_width="20px" android:layout_height="35px" android:text="m"
+                      android:id="@+id/txtCoverM" android:textColor="#FFFFFF" android:textSize="16px"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginRight="50px" android:gravity="right|top" android:layout_marginTop="8px"/>
+            <TextView android:layout_width="20px" android:layout_height="35px"
+                      android:text="ft" android:id="@+id/txtCoverFT"
+                      android:textColor="#FFFFFF"
+                      android:textSize="16px" android:layout_alignParentRight="true"
+                      android:layout_marginRight="50px" android:gravity="right|top" android:layout_marginTop="8px"/>
+            <EditText
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:text="0.0"
+                    android:id="@+id/txtCoverage" android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="50px" android:background="#AAAAAA"
+                    android:padding="5px" android:inputType="numberDecimal" android:textColor="#000000"
+                    android:textSize="16px" android:selectAllOnFocus="false" android:layout_marginTop="5px"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="10px"
+                        android:id="@+id/RLCoverageFooter" android:background="@drawable/bg_overviewtail"
+                        android:layout_below="@+id/RLCoverageMain"/>
+    </RelativeLayout>
+    <Button
+            android:layout_width="220px"
+            android:layout_height="50px"
+            android:id="@+id/btnSummary" android:layout_centerHorizontal="true" android:layout_below="@+id/RLCoverage"
+            android:layout_marginTop="50px" android:background="@drawable/bt_summary"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/RLSelectView"
+            android:background="#3CFFFFFF" android:layout_above="@+id/RLBottomBar" android:visibility="gone">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="250px" android:id="@+id/RLSelectMain"
+                        android:layout_alignParentBottom="true" android:background="@drawable/bg_picker">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="50px" android:id="@+id/RLHeader"
+                            android:background="@drawable/bg_title_bar">
+                <ImageView android:layout_width="300px" android:layout_height="30px" android:id="@+id/imgSelectTitle"
+                           android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                           android:src="@drawable/title_select_job" android:scaleType="fitCenter"
+                           android:layout_marginTop="10px" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <ListView android:layout_width="fill_parent" android:layout_height="200px" android:id="@+id/listSelectView"
+                      android:layout_below="@+id/RLHeader"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
